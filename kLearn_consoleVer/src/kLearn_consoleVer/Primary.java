@@ -1,3 +1,20 @@
+/*
+ 	Program for blind printing learn. 
+ 	
+ 	Functionality:
+ 		- ASCII image of keyboard with marked key
+ 		- Check input
+ 		- Reload the random key
+ 		- Score output
+ 		
+ 	Updates:
+ 		- Planned to move on GUI in JavaFX or Swing
+ 		
+ 	Author:
+ 		D3coy (2019)
+ 	
+*/
+
 package kLearn_consoleVer;
 
 import java.util.Random;
@@ -7,6 +24,10 @@ public class Primary
 {	
 	public static void main(String[] args) 
 	{
+		System.out.printf("%50s", "Keyboard blind printing program [non-gui ver 0.1]");
+		System.out.printf("\n");
+		System.out.printf("\n");
+		
 		Body bodyObj = new Body();
 		bodyObj.startBody();
 	}
@@ -17,7 +38,10 @@ class Body
 	String chars = "abcdefghijklmnopqrstuvwxyz";
 	String letters = "1234567890";
 	String keyboard = "1234567890qwertyuiopasdfghjklzxcvbnm";
+	
+	// cycle enter from operator
 	int count = 0;
+	boolean flag = true;
 	
 	//Body(){
 	//		
@@ -92,7 +116,6 @@ class Body
 		
 		System.out.println("\n Press the [" + symbol + "] button");
 		Scanner in = new Scanner(System.in);
-		boolean flag = true;
 		
 		// Get char in console, read from userinput and if inputted == getRandom(char) callback in recursive
 		while (flag) {
@@ -114,6 +137,7 @@ class Body
 			else if (num_char == '`') {
 				System.out.println("Game is over!");
 				System.out.println("Your score is: [" + count + "]");
+				flag = false;
 			}
 			else {
 				System.out.println("Incorrect, try again!");
