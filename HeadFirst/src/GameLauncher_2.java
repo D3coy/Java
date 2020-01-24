@@ -1,11 +1,11 @@
 class GuessGame{
-	Player p1;	//экземпляры на основе класса Player
+	Player p1;	//Ссылочные перменные типа Player
 	Player p2;
 	Player p3;
 	
 	public void startGame() {
-		p1 = new Player();	//объекты типа Player
-		p2 = new Player();
+		p1 = new Player();	//Выделение памяти в куче для объекта Player, связывание ссылчной перменной и объекта
+		p2 = new Player();	//p1 - это указатель(в формате бит) на объект в куче.
 		p3 = new Player();
 		
 		int guessp1 = 0;	//хранение вариантов предположенных игроками
