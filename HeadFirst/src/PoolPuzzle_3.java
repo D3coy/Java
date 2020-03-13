@@ -13,7 +13,7 @@ public class PoolPuzzle_3
 		while(x < 4) {
 			
 			// Don't forget that here's link <-> object binding ---> ta[0] = new .., ta[1] = new ..
-			// Plus in every link variable = object in array stores individual variables [area, height, length]
+			// Plus in every link variable = object, in array, stores individual variables [area, height, length]
 			ta[x] = new PoolPuzzle_3();
 			
 			ta[x].height = (x + 1) * 2;
