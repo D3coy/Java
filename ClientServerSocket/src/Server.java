@@ -1,5 +1,7 @@
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Random;
+
 import javax.management.RuntimeErrorException;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -54,8 +56,8 @@ public class Server
 						String request = reader.readLine();
 						System.out.println("Request: " + request);	// read bytes from client
 						
-						String response = "HELLO FROM SERVER" + " " + request.length();
-						System.out.println("Response: " + response);
+						String response = (int)(Math.random() * 30 - 10) + "";
+						System.out.println("Response: " + response);	// received from client
 						
 						writer.write(response);
 						writer.newLine();
@@ -67,7 +69,7 @@ public class Server
 				// if we don't add this catch like that boiii in itvdn, exception will raise
 				// in catch from out of while, so if connection will cause an error -> while(true)
 				// will bucked up
-				catch (IOException | NullPointerException e) {
+				catch (NullPointerException e) {
 					
 					// use unchecked exception for not to work on it.
 					//throw new RuntimeException(e);

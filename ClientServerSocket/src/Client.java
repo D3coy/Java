@@ -28,14 +28,14 @@ public class Client
 			System.out.println("Connected to server succesfully!");
 			
 			String request = "Ufa";
-			System.out.println(request);
+			System.out.println("Request_client: " + request);
 			
 			writer.write(request);
 			writer.newLine();
 			writer.flush();
 			
 			String response = reader.readLine();
-			System.out.println(response);
+			System.out.println("Response_server: " + response);
 		} 
 		catch (IOException e) {
 			e.printStackTrace();	// print every error from stack
