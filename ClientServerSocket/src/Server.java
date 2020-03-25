@@ -27,43 +27,45 @@ public class Server
 			
 			while (true) {
 			
-				try (
-						Socket sock = server.accept();	//waiting for client connecting. if client connected program create a handler for further interactions
+				try (Phone phone = new Phone(server)
+						//Socket sock = server.accept();	//waiting for client connecting. if client connected program create a handler for further interactions
 						
 						// getInputStream - receive data stream from client, getOutputStream - save stream, for send out to the client 
-						OutputStream streamW = sock.getOutputStream();
+						//OutputStream streamW = sock.getOutputStream();
 						
 						// Remade byte-by-byte writer to string writer(code each symbol of string to byte by encoding) to the client
-						OutputStreamWriter streamWriter = new OutputStreamWriter(streamW);
+						//OutputStreamWriter streamWriter = new OutputStreamWriter(streamW);
 						
 						// Write string with newline feature. 
 						// Exactly difference between BufferedWriter and OutputStream is that in BufferedWriter symbols
 						// cached in memory, and Java aint need to call converter(char-byte) for each symbol just like in OutputStreamWriter 
-						BufferedWriter writer = new BufferedWriter(streamWriter);
+						//BufferedWriter writer = new BufferedWriter(streamWriter);
 						
 						
 	//					InputStream streamR = sock.getInputStream();
 	//					InputStreamReader streamReader = new InputStreamReader(streamR);
 	//					BufferedReader reader = new BufferedReader(streamReader);
 						
-						BufferedReader reader = 
-								new BufferedReader(
-										new  InputStreamReader(
-												sock.getInputStream()))
+						//BufferedReader reader = 
+							//	new BufferedReader(
+								//		new  InputStreamReader(
+									//			sock.getInputStream()))
 					) {
 						System.out.println("Client connected");
 						
-						String request = reader.readLine();
+						//String request = reader.readLine();
+						String request = phone.readLine();
 						System.out.println("Request: " + request);	// read bytes from client
 						
 						String response = (int)(Math.random() * 30 - 10) + "";
 						System.out.println("Response: " + response);	// received from client
 						
-						writer.write(response);
-						writer.newLine();
+						phone.writeLine(response);
+						//writer.write(response);
+						//writer.newLine();
 						
 						// command for sending message directly..
-						writer.flush();
+						//writer.flush();
 					  }
 
 				// if we don't add this catch like that boiii in itvdn, exception will raise

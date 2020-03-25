@@ -55,9 +55,9 @@ public class Phone implements Closeable
 		}
 	}
 	
-	public void readLine() {
+	public String readLine() {
 		try {
-			reader.readLine();
+			return reader.readLine();
 		}
 		catch (IOException e) {
 			throw new RuntimeException();
