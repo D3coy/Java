@@ -1,4 +1,7 @@
 import java.net.Socket;
+
+import javax.management.RuntimeErrorException;
+
 import java.net.ServerSocket;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -39,6 +42,9 @@ public class Phone implements Closeable
 			this.writer = createWriter();
 		}
 		catch (IOException e) {
+			
+			// need to manually throws ex. here 'cause
+			// methods : createReader(), createWriter()
 			throw new RuntimeException(e);
 		}
 	}
@@ -64,7 +70,8 @@ public class Phone implements Closeable
 		}
 	}
 	
-	// throws exception here, cause ex checks in constructors calling
+	// throws exception here, cause ex checks in constructors calling,
+	// also getInput and getOutputStream function may cause an IO failed in transfer data
 	private BufferedReader createReader() throws IOException{
 		return new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	}
