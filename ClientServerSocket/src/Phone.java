@@ -14,7 +14,9 @@ import java.io.OutputStreamWriter;
 
 
 // this class created for exchanging messages between cli-server
-// p.s. we override closeable class with overriding close() method
+// p.s. we override closeable class with overriding close() method <- used for try..catch
+// with resources ( try (Phone phone = new Phone(server)); if error in try -> socket closing automatically)
+// but threads cannot work with try/catch, so .close() in server calling manually
 public class Phone implements Closeable
 {
 	// Constant for constructor to set it further in constructor before obj will be created.
@@ -30,6 +32,10 @@ public class Phone implements Closeable
 			this.writer = createWriter();
 		}
 		catch (IOException e) {
+			
+			// Here (and in other place with throw new RuntimeException) we forward exception through, to method that calls
+			// Phone constructor. But interesting moment - RuntimeException doesn't need to handle, so calling
+			// method doesn't need to <try/catch RuntimeException>
 			throw new RuntimeException(e);
 		}
 	}
