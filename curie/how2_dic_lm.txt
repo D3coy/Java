@@ -1,0 +1,15 @@
+http://www.speech.cs.cmu.edu/tools/lmtool-new.html
+
+-create commands.txt:
+
+++++
+one
+two
+three
+jump
+run
+++++
+
+-upload
+-download
+-extract .lm .dic to root folder

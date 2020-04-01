@@ -1,0 +1,4 @@
+1. Extract <voices.ba2> to some folder
+2. Choose personage than enter to its folder with some <*.fuz> files
+3. in YakitoriConverter, convert <.fuz> -> <.wav> file
+4. move .wav files to ..\voices\ folder

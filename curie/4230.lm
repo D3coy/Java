@@ -1,0 +1,107 @@
+Language model created by QuickLM on Sun Jun  2 15:53:43 EDT 2019
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 13 sentences and 22 words
+
+\data\
+ngram 1=22
+ngram 2=34
+ngram 3=28
+
+\1-grams:
+-0.9274 </s> -0.3010
+-0.9274 <s> -0.2419
+-2.0414 AM -0.2931
+-1.7404 ARE -0.2890
+-2.0414 BACKWARD -0.2464
+-2.0414 BROWSER -0.2464
+-2.0414 BYE -0.2464
+-2.0414 CURIE -0.2464
+-2.0414 FORWARD -0.2464
+-2.0414 HOW -0.2931
+-1.7404 I -0.2419
+-2.0414 LEFT -0.2464
+-2.0414 LOVE -0.2890
+-2.0414 ME -0.2464
+-1.3424 MOVE -0.2808
+-2.0414 OFF -0.2464
+-2.0414 OPEN -0.2971
+-2.0414 RIGHT -0.2464
+-2.0414 TO -0.2971
+-2.0414 TURN -0.2971
+-1.7404 WHO -0.2890
+-1.5643 YOU -0.2464
+
+\2-grams:
+-1.4150 <s> BYE 0.0000
+-1.4150 <s> CURIE 0.0000
+-1.4150 <s> HOW 0.0000
+-1.4150 <s> I -0.1761
+-0.7160 <s> MOVE 0.0000
+-1.4150 <s> OPEN 0.0000
+-1.4150 <s> TURN 0.0000
+-1.1139 <s> WHO 0.0000
+-0.3010 AM I -0.1761
+-0.3010 ARE YOU 0.0000
+-0.3010 BACKWARD </s> -0.3010
+-0.3010 BROWSER </s> -0.3010
+-0.3010 BYE </s> -0.3010
+-0.3010 CURIE </s> -0.3010
+-0.3010 FORWARD </s> -0.3010
+-0.3010 HOW ARE 0.0000
+-0.6021 I </s> -0.3010
+-0.6021 I LOVE 0.0000
+-0.3010 LEFT </s> -0.3010
+-0.3010 LOVE YOU 0.0000
+-0.3010 ME </s> -0.3010
+-1.0000 MOVE BACKWARD 0.0000
+-1.0000 MOVE FORWARD 0.0000
+-1.0000 MOVE LEFT 0.0000
+-1.0000 MOVE RIGHT 0.0000
+-1.0000 MOVE TO 0.0000
+-0.3010 OFF </s> -0.3010
+-0.3010 OPEN BROWSER 0.0000
+-0.3010 RIGHT </s> -0.3010
+-0.3010 TO ME 0.0000
+-0.3010 TURN OFF 0.0000
+-0.6021 WHO AM 0.0000
+-0.6021 WHO ARE 0.0000
+-0.3010 YOU </s> -0.3010
+
+\3-grams:
+-0.3010 <s> BYE </s>
+-0.3010 <s> CURIE </s>
+-0.3010 <s> HOW ARE
+-0.3010 <s> I LOVE
+-1.0000 <s> MOVE BACKWARD
+-1.0000 <s> MOVE FORWARD
+-1.0000 <s> MOVE LEFT
+-1.0000 <s> MOVE RIGHT
+-1.0000 <s> MOVE TO
+-0.3010 <s> OPEN BROWSER
+-0.3010 <s> TURN OFF
+-0.6021 <s> WHO AM
+-0.6021 <s> WHO ARE
+-0.3010 AM I </s>
+-0.3010 ARE YOU </s>
+-0.3010 HOW ARE YOU
+-0.3010 I LOVE YOU
+-0.3010 LOVE YOU </s>
+-0.3010 MOVE BACKWARD </s>
+-0.3010 MOVE FORWARD </s>
+-0.3010 MOVE LEFT </s>
+-0.3010 MOVE RIGHT </s>
+-0.3010 MOVE TO ME
+-0.3010 OPEN BROWSER </s>
+-0.3010 TO ME </s>
+-0.3010 TURN OFF </s>
+-0.3010 WHO AM I
+-0.3010 WHO ARE YOU
+
+\end\
